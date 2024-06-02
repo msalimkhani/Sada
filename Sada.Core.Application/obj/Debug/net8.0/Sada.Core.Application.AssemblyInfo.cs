@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Sada.Core.Application")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+977b8fdcae992c6ed6d02edf8bb3688b8fed6cf0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3a7ad01bfaec11e1d2cc17d0b41f3e63a5e35923")]
 [assembly: System.Reflection.AssemblyProductAttribute("Sada.Core.Application")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Sada.Core.Application")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
