@@ -8,6 +8,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{94FD7096-B9B4-4A7E-8174-09146ABEBB76}"
 	ProjectSection(SolutionItems) = preProject
 		.gitignore = .gitignore
+		.todo = .todo
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sada.Presintation.ConsoleTests", "Sada.Presintation.Console\Sada.Presintation.ConsoleTests.csproj", "{8F01ADDC-3AB9-4609-915B-A3347704CAF6}"
