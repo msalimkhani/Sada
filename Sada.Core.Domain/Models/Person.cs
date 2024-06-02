@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Sada.Core.Domain.Models
+﻿namespace Sada.Core.Domain.Models
 {
     public class Person
     {
@@ -15,7 +9,8 @@ namespace Sada.Core.Domain.Models
         public required ShamsiDate BirthDate { get; set; }
         public required string PhoneNumber { get; set; }
         public required string Address { get; set; }
-        public Person(long nationalCode, int serial, string name, string fatherName, ShamsiDate birthDate, string phoneNumber, string address)
+        public required string PostalCode { get; set; }
+        public Person(long nationalCode, int serial, string name, string fatherName, ShamsiDate birthDate, string phoneNumber, string address, string postalCode)
         {
             NationalCode = nationalCode;
             Serial = serial;
@@ -24,6 +19,7 @@ namespace Sada.Core.Domain.Models
             BirthDate = birthDate;
             PhoneNumber = phoneNumber;
             Address = address;
+            PostalCode = postalCode;
         }
     }
 }
