@@ -5,6 +5,13 @@ VisualStudioVersion = 17.9.34622.214
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sada.Core.Domain", "Sada.Core.Domain\Sada.Core.Domain.csproj", "{E118434C-F582-4334-8C4E-BF1B10AFF47E}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{94FD7096-B9B4-4A7E-8174-09146ABEBB76}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sada.Presintation.ConsoleTests", "Sada.Presintation.Console\Sada.Presintation.ConsoleTests.csproj", "{8F01ADDC-3AB9-4609-915B-A3347704CAF6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +22,10 @@ Global
 		{E118434C-F582-4334-8C4E-BF1B10AFF47E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E118434C-F582-4334-8C4E-BF1B10AFF47E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E118434C-F582-4334-8C4E-BF1B10AFF47E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F01ADDC-3AB9-4609-915B-A3347704CAF6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F01ADDC-3AB9-4609-915B-A3347704CAF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F01ADDC-3AB9-4609-915B-A3347704CAF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F01ADDC-3AB9-4609-915B-A3347704CAF6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

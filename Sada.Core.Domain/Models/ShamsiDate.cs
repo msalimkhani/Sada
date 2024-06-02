@@ -2,9 +2,9 @@
 {
     public class ShamsiDate
     {
-        public required int Year { get; set; }
-        public required int Month { get; set; }
-        public required int Day { get; set; }
+        public int Year { get; set; }
+        public int Month { get; set; }
+        public int Day { get; set; }
         public string ToString(string format)
         {
             return string.Format(format, Year, Month, Day);

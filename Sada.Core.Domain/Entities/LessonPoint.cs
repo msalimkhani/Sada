@@ -11,10 +11,5 @@ namespace Sada.Core.Domain.Entities
         public int LessonPointId { get; set; }
         public required int LessonId { get; set; }
         public required int Point { get; set; }
-        public LessonPoint(int point, int lessonId) 
-        {
-            Point = point;
-            LessonId = lessonId;
-        }
     }
 }

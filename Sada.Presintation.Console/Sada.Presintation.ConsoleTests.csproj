@@ -7,4 +7,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Sada.Core.Domain\Sada.Core.Domain.csproj" />
+  </ItemGroup>
+
 </Project>
