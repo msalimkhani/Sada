@@ -12,7 +12,7 @@ namespace Sada.Core.Application.Nomre
     {
         public async Task<IEnumerable<Lesson>> RetriveLessons(int gradeId)
         {
-            return await _lRepository.WhereAsync(lw => lw.GredeId == gradeId);
+            return await _lRepository.WhereAsync(lw => lw.GradeId == gradeId);
         }
         public async Task RegisterNomreForStudentByLessonId(int studentId, int lessonId, int point)
         {
