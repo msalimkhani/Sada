@@ -12,7 +12,6 @@
 
   <ItemGroup>
     <Folder Include="Karname\" />
-    <Folder Include="Nomre\" />
   </ItemGroup>
 
 </Project>

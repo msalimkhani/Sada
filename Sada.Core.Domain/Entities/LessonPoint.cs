@@ -10,6 +10,7 @@ namespace Sada.Core.Domain.Entities
     {
         public int LessonPointId { get; set; }
         public required int LessonId { get; set; }
+        public int StudentId { get; set; }
         public required int Point { get; set; }
     }
 }
