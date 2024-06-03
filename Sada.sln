@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34622.214
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sada.Core.Domain", "Sada.Core.Domain\Sada.Core.Domain.csproj", "{E118434C-F582-4334-8C4E-BF1B10AFF47E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sada.Core.Domain", "Sada.Core.Domain\Sada.Core.Domain.csproj", "{E118434C-F582-4334-8C4E-BF1B10AFF47E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{94FD7096-B9B4-4A7E-8174-09146ABEBB76}"
 	ProjectSection(SolutionItems) = preProject
@@ -11,9 +11,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		.todo = .todo
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sada.Presintation.ConsoleTests", "Sada.Presintation.Console\Sada.Presintation.ConsoleTests.csproj", "{8F01ADDC-3AB9-4609-915B-A3347704CAF6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sada.Presintation.ConsoleTests", "Sada.Presintation.Console\Sada.Presintation.ConsoleTests.csproj", "{8F01ADDC-3AB9-4609-915B-A3347704CAF6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sada.Core.Application", "Sada.Core.Application\Sada.Core.Application.csproj", "{277559F4-058F-4098-8396-46F33625359B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sada.Core.Application", "Sada.Core.Application\Sada.Core.Application.csproj", "{277559F4-058F-4098-8396-46F33625359B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sada.Infrastructure", "Sada.Infrastructure\Sada.Infrastructure.csproj", "{312E363D-3137-442E-8921-5C7352D80232}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sada.Presintation.Web", "Sada.Presintation.Web\Sada.Presintation.Web.csproj", "{A70665AD-069C-4448-9459-6E2926319444}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +37,14 @@ Global
 		{277559F4-058F-4098-8396-46F33625359B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{277559F4-058F-4098-8396-46F33625359B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{277559F4-058F-4098-8396-46F33625359B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{312E363D-3137-442E-8921-5C7352D80232}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{312E363D-3137-442E-8921-5C7352D80232}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{312E363D-3137-442E-8921-5C7352D80232}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{312E363D-3137-442E-8921-5C7352D80232}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A70665AD-069C-4448-9459-6E2926319444}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A70665AD-069C-4448-9459-6E2926319444}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A70665AD-069C-4448-9459-6E2926319444}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A70665AD-069C-4448-9459-6E2926319444}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
