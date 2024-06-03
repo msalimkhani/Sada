@@ -10,4 +10,9 @@
     <ProjectReference Include="..\Sada.Core.Domain\Sada.Core.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Karname\" />
+    <Folder Include="Nomre\" />
+  </ItemGroup>
+
 </Project>
