@@ -1,7 +1,10 @@
-﻿namespace Sada.Core.Domain.Entities
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace Sada.Core.Domain.Entities
 {
     public class School
     {
+        [Key]
         public int SchoolId { get; set; }
         public required string SchoolName { get; set; }
         public required string PhoneNumber { get; set; }

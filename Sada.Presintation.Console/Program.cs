@@ -32,13 +32,13 @@ namespace Sada.Presintation.ConsoleTests
             {
                 LessonId = 1,
                 LessonName = "Math",
-                GredeId = 1
+                GradeId = 1
             };
             Lesson l2 = new Lesson()
             {
                 LessonId = 2,
                 LessonName = "Physics",
-                GredeId = 1
+                GradeId = 1
             };
             List<Lesson> lessons = new List<Lesson>() { l1, l2 };
             g1.Lessons = lessons;
