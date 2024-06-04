@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\Sada.Presintation.WebAPI.props" />
+</Project>

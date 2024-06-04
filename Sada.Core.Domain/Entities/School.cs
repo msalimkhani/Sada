@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Sada.Core.Domain.Entities
 {
@@ -6,6 +7,8 @@ namespace Sada.Core.Domain.Entities
     {
         [Key]
         public int SchoolId { get; set; }
+        [ForeignKey(nameof(User))]
+        public int UserId { get; set; }
         public required string SchoolName { get; set; }
         public required string PhoneNumber { get; set; }
         public required string Address { get; set; }
