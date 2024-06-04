@@ -4,8 +4,6 @@ namespace Sada.Presintation.WebAPI.Auth
 {
     public class RegisterRequest
     {
-        [Required]
-        public string UserID { get; set; }
 
         [Required]
         public string Username { get; set; }

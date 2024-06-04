@@ -43,16 +43,6 @@ namespace Sada.Presintation.WebAPI
                     ClockSkew = TimeSpan.Zero
                 };
             });
-
-
-            var app = builder.Build();
-
-            // Configure the HTTP request pipeline.
-            if (app.Environment.IsDevelopment())
-            {
-                app.UseSwagger();
-                app.UseSwaggerUI();
-            }
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen(c =>
             {
@@ -86,6 +76,16 @@ namespace Sada.Presintation.WebAPI
                     }
                 });
             });
+
+            var app = builder.Build();
+
+            // Configure the HTTP request pipeline.
+            if (app.Environment.IsDevelopment())
+            {
+                app.UseSwagger();
+                app.UseSwaggerUI();
+            }
+            
             app.UseHttpsRedirection();
 
             app.UseAuthorization();
