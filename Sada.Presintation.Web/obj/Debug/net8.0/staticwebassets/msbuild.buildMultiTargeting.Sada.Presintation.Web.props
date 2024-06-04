@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\build\Sada.Presintation.Web.props" />
-</Project>

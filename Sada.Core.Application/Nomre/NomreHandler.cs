@@ -10,9 +10,9 @@ namespace Sada.Core.Application.Nomre
 {
     public class NomreHandler( IRepository<LessonPoint> _lpRepository, IRepository<Lesson> _lRepository)
     {
-        public async Task<IEnumerable<Lesson>> RetriveLessons(int gradeId)
+        public IEnumerable<Lesson> RetriveLessons(int gradeId)
         {
-            return await _lRepository.WhereAsync(lw => lw.GradeId == gradeId);
+            return _lRepository.Where(lw => lw.GradeId == gradeId).ToList();
         }
         public async Task RegisterNomreForStudentByLessonId(int studentId, int lessonId, int point)
         {

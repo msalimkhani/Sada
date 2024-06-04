@@ -16,3 +16,5 @@ C:\Users\mahdi\Desktop\Sada\Sada\Sada.Infrastructure\obj\Debug\net8.0\refint\Sad
 C:\Users\mahdi\Desktop\Sada\Sada\Sada.Infrastructure\obj\Debug\net8.0\Sada.Infrastructure.pdb
 C:\Users\mahdi\Desktop\Sada\Sada\Sada.Infrastructure\obj\Debug\net8.0\Sada.Infrastructure.genruntimeconfig.cache
 C:\Users\mahdi\Desktop\Sada\Sada\Sada.Infrastructure\obj\Debug\net8.0\ref\Sada.Infrastructure.dll
+C:\Users\mahdi\Desktop\Sada\Sada\Sada.Infrastructure\bin\Debug\net8.0\Sada.Core.Application.dll
+C:\Users\mahdi\Desktop\Sada\Sada\Sada.Infrastructure\bin\Debug\net8.0\Sada.Core.Application.pdb
