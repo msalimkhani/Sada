@@ -43,12 +43,27 @@
             btnBrowse = new Button();
             txtPath = new TextBox();
             tabPage2 = new TabPage();
+            groupBox5 = new GroupBox();
+            btnInsertJWT = new Button();
+            txtAudience = new TextBox();
+            txtIssuer = new TextBox();
+            txtKeyJWT = new TextBox();
+            label5 = new Label();
+            label4 = new Label();
+            label3 = new Label();
+            groupBox3 = new GroupBox();
+            btnLoad = new Button();
+            btnBrowseJson = new Button();
+            txtJsonPath = new TextBox();
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
             groupBox2.SuspendLayout();
             groupBox4.SuspendLayout();
             gbInsert.SuspendLayout();
             groupBox1.SuspendLayout();
+            tabPage2.SuspendLayout();
+            groupBox5.SuspendLayout();
+            groupBox3.SuspendLayout();
             SuspendLayout();
             // 
             // tabControl1
@@ -197,6 +212,8 @@
             // 
             // tabPage2
             // 
+            tabPage2.Controls.Add(groupBox5);
+            tabPage2.Controls.Add(groupBox3);
             tabPage2.Location = new Point(4, 24);
             tabPage2.Name = "tabPage2";
             tabPage2.Padding = new Padding(3);
@@ -204,6 +221,120 @@
             tabPage2.TabIndex = 1;
             tabPage2.Text = "JWT tools";
             tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // groupBox5
+            // 
+            groupBox5.Controls.Add(btnInsertJWT);
+            groupBox5.Controls.Add(txtAudience);
+            groupBox5.Controls.Add(txtIssuer);
+            groupBox5.Controls.Add(txtKeyJWT);
+            groupBox5.Controls.Add(label5);
+            groupBox5.Controls.Add(label4);
+            groupBox5.Controls.Add(label3);
+            groupBox5.Location = new Point(8, 127);
+            groupBox5.Name = "groupBox5";
+            groupBox5.Size = new Size(557, 199);
+            groupBox5.TabIndex = 1;
+            groupBox5.TabStop = false;
+            groupBox5.Text = "Jwt Secret Insertor";
+            // 
+            // btnInsertJWT
+            // 
+            btnInsertJWT.Location = new Point(476, 170);
+            btnInsertJWT.Name = "btnInsertJWT";
+            btnInsertJWT.Size = new Size(75, 23);
+            btnInsertJWT.TabIndex = 6;
+            btnInsertJWT.Text = "Insert";
+            btnInsertJWT.UseVisualStyleBackColor = true;
+            btnInsertJWT.Click += btnInsertJWT_Click;
+            // 
+            // txtAudience
+            // 
+            txtAudience.Location = new Point(75, 115);
+            txtAudience.Name = "txtAudience";
+            txtAudience.Size = new Size(476, 23);
+            txtAudience.TabIndex = 5;
+            // 
+            // txtIssuer
+            // 
+            txtIssuer.Location = new Point(75, 66);
+            txtIssuer.Name = "txtIssuer";
+            txtIssuer.Size = new Size(476, 23);
+            txtIssuer.TabIndex = 4;
+            // 
+            // txtKeyJWT
+            // 
+            txtKeyJWT.Location = new Point(75, 31);
+            txtKeyJWT.Name = "txtKeyJWT";
+            txtKeyJWT.Size = new Size(476, 23);
+            txtKeyJWT.TabIndex = 3;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(6, 118);
+            label5.Name = "label5";
+            label5.Size = new Size(63, 15);
+            label5.TabIndex = 2;
+            label5.Text = "Audience :";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(6, 69);
+            label4.Name = "label4";
+            label4.Size = new Size(43, 15);
+            label4.TabIndex = 1;
+            label4.Text = "Issuer :";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(6, 34);
+            label3.Name = "label3";
+            label3.Size = new Size(32, 15);
+            label3.TabIndex = 0;
+            label3.Text = "Key :";
+            // 
+            // groupBox3
+            // 
+            groupBox3.Controls.Add(btnLoad);
+            groupBox3.Controls.Add(btnBrowseJson);
+            groupBox3.Controls.Add(txtJsonPath);
+            groupBox3.Location = new Point(8, 6);
+            groupBox3.Name = "groupBox3";
+            groupBox3.Size = new Size(557, 97);
+            groupBox3.TabIndex = 0;
+            groupBox3.TabStop = false;
+            groupBox3.Text = "appsettings.json";
+            // 
+            // btnLoad
+            // 
+            btnLoad.Location = new Point(6, 68);
+            btnLoad.Name = "btnLoad";
+            btnLoad.Size = new Size(545, 23);
+            btnLoad.TabIndex = 2;
+            btnLoad.Text = "Load";
+            btnLoad.UseVisualStyleBackColor = true;
+            btnLoad.Click += btnLoad_Click;
+            // 
+            // btnBrowseJson
+            // 
+            btnBrowseJson.Location = new Point(528, 22);
+            btnBrowseJson.Name = "btnBrowseJson";
+            btnBrowseJson.Size = new Size(23, 23);
+            btnBrowseJson.TabIndex = 1;
+            btnBrowseJson.Text = "...";
+            btnBrowseJson.UseVisualStyleBackColor = true;
+            btnBrowseJson.Click += btnBrowseJson_Click;
+            // 
+            // txtJsonPath
+            // 
+            txtJsonPath.Enabled = false;
+            txtJsonPath.Location = new Point(6, 22);
+            txtJsonPath.Name = "txtJsonPath";
+            txtJsonPath.Size = new Size(517, 23);
+            txtJsonPath.TabIndex = 0;
             // 
             // Form1
             // 
@@ -223,6 +354,11 @@
             gbInsert.PerformLayout();
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
+            tabPage2.ResumeLayout(false);
+            groupBox5.ResumeLayout(false);
+            groupBox5.PerformLayout();
+            groupBox3.ResumeLayout(false);
+            groupBox3.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -243,5 +379,17 @@
         private Label label2;
         private Label label1;
         private TextBox txtKey;
+        private GroupBox groupBox5;
+        private GroupBox groupBox3;
+        private Button btnBrowseJson;
+        private TextBox txtJsonPath;
+        private Label label3;
+        private Label label4;
+        private Label label5;
+        private Button btnInsertJWT;
+        private TextBox txtAudience;
+        private TextBox txtIssuer;
+        private TextBox txtKeyJWT;
+        private Button btnLoad;
     }
 }

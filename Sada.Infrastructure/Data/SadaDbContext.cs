@@ -1,10 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Sada.Core.Domain.Entities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Sada.Infrastructure.Data
 {
@@ -16,6 +11,7 @@ namespace Sada.Infrastructure.Data
         public DbSet<Lesson> Lessons { get; set; }
         public DbSet<LessonPoint> LessonPoints { get; set; }
         public DbSet<Grade> Grades { get; set; }
+        public DbSet<User> Users { get; set; }
         public SadaDbContext(DbContextOptions<SadaDbContext> dbContextOptions) : base(dbContextOptions)
         {
         }

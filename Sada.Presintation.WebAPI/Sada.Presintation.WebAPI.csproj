@@ -17,14 +17,13 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
-    <Folder Include="JWTTools\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\Sada.Core.Application\Sada.Core.Application.csproj" />
     <ProjectReference Include="..\Sada.Core.Domain\Sada.Core.Domain.csproj" />
     <ProjectReference Include="..\Sada.Infrastructure\Sada.Infrastructure.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="JWTTools\" />
   </ItemGroup>
 
 </Project>

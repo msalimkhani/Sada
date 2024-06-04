@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Sada.Infrastructure")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+76b68b83b09b4cef33c419dd31c18014719652a1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0fdbb20c88db18e5b701d67abf00f2569fad58a0")]
 [assembly: System.Reflection.AssemblyProductAttribute("Sada.Infrastructure")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Sada.Infrastructure")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
