@@ -23,7 +23,7 @@ namespace Sada.Presintation.WebAPI.Controllers
             string res = "";
             for (int i = 0; i< 5; i++)
             {
-                res += chars[rnd.Next(77)];
+                res += chars[rnd.Next(chars.Length)];
             }
             return res;
         }
