@@ -1,0 +1,17 @@
+C:\Users\mahdi\Desktop\Sada\Sada\Sada.Tools.Windows\bin\Debug\net8.0-windows\Sada.Tools.Windows.exe
+C:\Users\mahdi\Desktop\Sada\Sada\Sada.Tools.Windows\bin\Debug\net8.0-windows\Sada.Tools.Windows.deps.json
+C:\Users\mahdi\Desktop\Sada\Sada\Sada.Tools.Windows\bin\Debug\net8.0-windows\Sada.Tools.Windows.runtimeconfig.json
+C:\Users\mahdi\Desktop\Sada\Sada\Sada.Tools.Windows\bin\Debug\net8.0-windows\Sada.Tools.Windows.dll
+C:\Users\mahdi\Desktop\Sada\Sada\Sada.Tools.Windows\bin\Debug\net8.0-windows\Sada.Tools.Windows.pdb
+C:\Users\mahdi\Desktop\Sada\Sada\Sada.Tools.Windows\obj\Debug\net8.0-windows\Sada.Tools.Windows.Form1.resources
+C:\Users\mahdi\Desktop\Sada\Sada\Sada.Tools.Windows\obj\Debug\net8.0-windows\Sada.Tools.Windows.csproj.GenerateResource.cache
+C:\Users\mahdi\Desktop\Sada\Sada\Sada.Tools.Windows\obj\Debug\net8.0-windows\Sada.Tools.Windows.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mahdi\Desktop\Sada\Sada\Sada.Tools.Windows\obj\Debug\net8.0-windows\Sada.Tools.Windows.AssemblyInfoInputs.cache
+C:\Users\mahdi\Desktop\Sada\Sada\Sada.Tools.Windows\obj\Debug\net8.0-windows\Sada.Tools.Windows.AssemblyInfo.cs
+C:\Users\mahdi\Desktop\Sada\Sada\Sada.Tools.Windows\obj\Debug\net8.0-windows\Sada.Tools.Windows.csproj.CoreCompileInputs.cache
+C:\Users\mahdi\Desktop\Sada\Sada\Sada.Tools.Windows\obj\Debug\net8.0-windows\Sada.Tools.Windows.sourcelink.json
+C:\Users\mahdi\Desktop\Sada\Sada\Sada.Tools.Windows\obj\Debug\net8.0-windows\Sada.Tools.Windows.dll
+C:\Users\mahdi\Desktop\Sada\Sada\Sada.Tools.Windows\obj\Debug\net8.0-windows\refint\Sada.Tools.Windows.dll
+C:\Users\mahdi\Desktop\Sada\Sada\Sada.Tools.Windows\obj\Debug\net8.0-windows\Sada.Tools.Windows.pdb
+C:\Users\mahdi\Desktop\Sada\Sada\Sada.Tools.Windows\obj\Debug\net8.0-windows\Sada.Tools.Windows.genruntimeconfig.cache
+C:\Users\mahdi\Desktop\Sada\Sada\Sada.Tools.Windows\obj\Debug\net8.0-windows\ref\Sada.Tools.Windows.dll

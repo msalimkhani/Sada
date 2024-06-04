@@ -15,6 +15,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sada.Core.Application", "Sa
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sada.Infrastructure", "Sada.Infrastructure\Sada.Infrastructure.csproj", "{312E363D-3137-442E-8921-5C7352D80232}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sada.Presintation.WebAPI", "Sada.Presintation.WebAPI\Sada.Presintation.WebAPI.csproj", "{DA1204C2-EF66-4B13-B255-E3306889F3A3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sada.Tools.Windows", "Sada.Tools.Windows\Sada.Tools.Windows.csproj", "{5514692C-1F20-4D4C-B3A6-C8F4DF21173A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +37,14 @@ Global
 		{312E363D-3137-442E-8921-5C7352D80232}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{312E363D-3137-442E-8921-5C7352D80232}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{312E363D-3137-442E-8921-5C7352D80232}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA1204C2-EF66-4B13-B255-E3306889F3A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA1204C2-EF66-4B13-B255-E3306889F3A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA1204C2-EF66-4B13-B255-E3306889F3A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA1204C2-EF66-4B13-B255-E3306889F3A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5514692C-1F20-4D4C-B3A6-C8F4DF21173A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5514692C-1F20-4D4C-B3A6-C8F4DF21173A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5514692C-1F20-4D4C-B3A6-C8F4DF21173A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5514692C-1F20-4D4C-B3A6-C8F4DF21173A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

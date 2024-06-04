@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>a2056906-9852-4670-8c1b-81f13bde6aae</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.6" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.6">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Controllers\" />
+    <Folder Include="JWTTools\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Sada.Core.Application\Sada.Core.Application.csproj" />
+    <ProjectReference Include="..\Sada.Core.Domain\Sada.Core.Domain.csproj" />
+    <ProjectReference Include="..\Sada.Infrastructure\Sada.Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>
