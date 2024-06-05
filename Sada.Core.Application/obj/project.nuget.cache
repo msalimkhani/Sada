@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "45XDgg/sB0jkqAZ1y/ZiOmHtwhzQN+G7t7l4nOeD/43JmUYwU7j74ImyXGbwDtTXFRFRppujLe8NauGFDeKqcw==",
+  "dgSpecHash": "jvZXn88ZpHakWHAWLnIdHmt2D+xIpodj+Q6EThEGHH+gg7NSHka60rdjYJ6+s8/bem6f1bO8Xt+q5KFwLEkM2Q==",
   "success": true,
   "projectFilePath": "C:\\Users\\mahdi\\Desktop\\Sada\\Sada\\Sada.Core.Application\\Sada.Core.Application.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\mahdi\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

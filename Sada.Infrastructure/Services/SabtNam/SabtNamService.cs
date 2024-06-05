@@ -1,11 +1,12 @@
 ﻿using Sada.Core.Application.Exceptions;
+using Sada.Core.Application.Interfaces;
 using Sada.Core.Application.Repositories;
 using Sada.Core.Domain.Entities;
 using System.Data;
 
-namespace Sada.Core.Application.SabtNam
+namespace Sada.Infrastructure.Services
 {
-    public class SabtNamHandler(IRepository<Student> repository) : IDisposable, IAsyncDisposable
+    public class SabtNamService(IRepository<Student> repository) : ISabtNamService
     {
 
         public async Task<bool> RegisterStudentAsync(Student student)

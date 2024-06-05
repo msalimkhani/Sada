@@ -1,4 +1,6 @@
-﻿using Sada.Core.Application.Exceptions;
+﻿using Microsoft.Extensions.DependencyInjection;
+using Sada.Core.Application.Exceptions;
+using Sada.Core.Application.Interfaces;
 using Sada.Core.Application.Repositories;
 using Sada.Core.Domain.Entities;
 using System;
@@ -8,20 +10,25 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Sada.Core.Application.ClassBandi
+namespace Sada.Infrastructure.Services
 {
-    public class ClassBandiHandler(IRepository<SchoolClass> repository) : IDisposable, IAsyncDisposable
+    public class ClassBandiService : IClassBandiService
     {
+        private IRepository<SchoolClass> _repository;
+        public ClassBandiService(IRepository<SchoolClass> repository)
+        {
+            _repository = repository;
+        }
         public async Task<bool> CreateClassAsync(SchoolClass schoolClass)
         {
             if (schoolClass == null)
             {
                 return false;
             }
-            repository.Add(schoolClass);
+            _repository.Add(schoolClass);
             try
             {
-                await repository.SaveChangesAsync();
+                await _repository.SaveChangesAsync();
                 return true;
             }
             catch (DBConcurrencyException ex)
@@ -36,10 +43,10 @@ namespace Sada.Core.Application.ClassBandi
             {
                 return false;
             }
-            repository.Update(schoolClass);
+            _repository.Update(schoolClass);
             try
             {
-                await repository.SaveChangesAsync();
+                await _repository.SaveChangesAsync();
                 return true;
             }
             catch (DBConcurrencyException ex)
@@ -50,10 +57,10 @@ namespace Sada.Core.Application.ClassBandi
         }
         public async Task<bool> DeleteClassAsync(int classId)
         {
-            repository.Delete(classId);
+            _repository.Delete(classId);
             try
             {
-                await repository.SaveChangesAsync();
+                await _repository.SaveChangesAsync();
                 return true;
             }
             catch (DBConcurrencyException ex)
@@ -62,9 +69,9 @@ namespace Sada.Core.Application.ClassBandi
                 throw new ClassBandiUnsuccesfulException(ex.Message, ex.InnerException);
             }
         }
-        public async Task<bool> RegisterStudentForClassAsync(int classId, Student student)
+        public async Task<bool> RegisterStudentForClassAsync(int classId, Student student)  
         {
-            var c = repository.FindById(classId);
+            var c = _repository.FindById(classId);
             if (c == null)
             {
                 throw new EntityNotFoundException<SchoolClass>("Cannot Found SchoolClass With Given Id!");
@@ -76,8 +83,8 @@ namespace Sada.Core.Application.ClassBandi
             else { c.Students.Add(student); }
             try
             {
-                repository.Update(c);
-                await repository.SaveChangesAsync();
+                _repository.Update(c);
+                await _repository.SaveChangesAsync();
                 return true;
             }
             catch (DBConcurrencyException ex)
@@ -88,7 +95,7 @@ namespace Sada.Core.Application.ClassBandi
         }
         public async Task<bool> RemoveStudentForClassAsync(int classId, Student student)
         {
-            var c = repository.FindById(classId);
+            var c = _repository.FindById(classId);
             if (c == null)
             {
                 throw new EntityNotFoundException<SchoolClass>("Cannot Found SchoolClass With Given Id!");
@@ -100,8 +107,8 @@ namespace Sada.Core.Application.ClassBandi
             else { c.Students.Remove(student); }
             try
             {
-                repository.Update(c);
-                await repository.SaveChangesAsync();
+                _repository.Update(c);
+                await _repository.SaveChangesAsync();
                 return true;
             }
             catch (DBConcurrencyException ex)
@@ -112,7 +119,7 @@ namespace Sada.Core.Application.ClassBandi
         }
         public void CreateClassStudentCapacity(int classId, int capacity)
         {
-            var c = repository.FindById(classId);
+            var c = _repository.FindById(classId);
             if (c == null)
             {
                 throw new EntityNotFoundException<SchoolClass>("Cannot Found SchoolClass With Given Id!");
@@ -120,17 +127,17 @@ namespace Sada.Core.Application.ClassBandi
             var l = new List<Student>();
             l.Capacity = capacity;
             c.Students = l;
-            repository.Update(c);
-            repository.SaveChanges();
+            _repository.Update(c);
+            _repository.SaveChanges();
         }
         public void Dispose()
         {
-            repository.Dispose();
+            _repository.Dispose();
         }
 
         public ValueTask DisposeAsync()
         {
-            return repository.DisposeAsync();
+            return _repository.DisposeAsync();
         }
     }
 }
