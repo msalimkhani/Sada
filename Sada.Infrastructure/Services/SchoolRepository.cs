@@ -1,4 +1,5 @@
-﻿using Sada.Core.Application.Repositories;
+﻿using Microsoft.EntityFrameworkCore;
+using Sada.Core.Application.Repositories;
 using Sada.Core.Domain.Entities;
 using Sada.Infrastructure.Data;
 using System;
@@ -14,17 +15,36 @@ namespace Sada.Infrastructure.Services
     {
         public bool Add(School model)
         {
-            throw new NotImplementedException();
+            try
+            {
+                sadaDbContext.Schools.Add(model);
+                return true;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
 
         public bool Delete(School model)
         {
-            throw new NotImplementedException();
+            if(model == null) throw new ArgumentNullException("model");
+            try
+            {
+                sadaDbContext.Schools.Remove(model);
+                return true;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
 
         public bool Delete(int id)
         {
-            throw new NotImplementedException();
+            return Delete(FindById(id));
         }
 
         public void Dispose()
@@ -59,33 +79,42 @@ namespace Sada.Infrastructure.Services
 
         public ICollection<School> GetAll()
         {
-            throw new NotImplementedException();
+            return sadaDbContext.Schools.ToList();
         }
 
-        public Task<ICollection<School>> GetAllAsync()
+        public async Task<ICollection<School>> GetAllAsync()
         {
-            throw new NotImplementedException();
+            return await sadaDbContext.Schools.ToListAsync();
         }
 
         public void SaveChanges()
         {
-            throw new NotImplementedException();
+            sadaDbContext.SaveChanges();
         }
 
-        public Task SaveChangesAsync()
+        public async Task SaveChangesAsync()
         {
-            throw new NotImplementedException();
+            await sadaDbContext.SaveChangesAsync();
         }
 
         public bool Update(School model)
         {
-            throw new NotImplementedException();
+            try
+            {
+                sadaDbContext.Entry(model).State = EntityState.Modified;
+                return true;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
 
 
         public IQueryable<School> Where(Expression<Func<School, bool>>? where = null)
         {
-            IQueryable<School> query = (IQueryable<School>)sadaDbContext.SchoolClasses;
+            IQueryable<School> query = sadaDbContext.Schools;
             if (where != null)
             {
                 query = query.Where(where);

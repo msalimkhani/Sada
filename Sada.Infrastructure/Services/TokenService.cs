@@ -28,13 +28,13 @@ namespace Sada.Infrastructure.Services
             {
                 Subject = new ClaimsIdentity(new Claim[]
                 {
-            new Claim(ClaimTypes.GivenName, user.DisplayName),
-            new Claim(ClaimTypes.Email, user.Email),
-                    // Add more claims as needed
+                    new Claim(ClaimTypes.GivenName, user.DisplayName),
+                    new Claim(ClaimTypes.Email, user.Email),
+                    new Claim(ClaimTypes.NameIdentifier, user.UserId.ToString()),
                 }),
                 Expires = DateTime.UtcNow.AddHours(1),
                 SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature),
-                Issuer = _config["Jwt:Issuer"], // Add this line
+                Issuer = _config["Jwt:Issuer"],
                 Audience = _config["Jwt:Audience"]
             };
 

@@ -11,13 +11,13 @@ using System.Threading.Tasks;
 
 namespace Sada.Infrastructure.Services
 {
-    public class GradeRepository(SadaDbContext sadaDbContext) : IRepository<Grade>
+    public class LessonRepository(SadaDbContext sadaDbContext) : IRepository<Lesson>
     {
-        public bool Add(Grade model)
+        public bool Add(Lesson model)
         {
             try
             {
-                sadaDbContext.Grades.Add(model);
+                sadaDbContext.Lessons.Add(model);
                 return true;
             }
             catch (Exception)
@@ -27,12 +27,12 @@ namespace Sada.Infrastructure.Services
             }
         }
 
-        public bool Delete(Grade model)
+        public bool Delete(Lesson model)
         {
             if (model == null) throw new ArgumentNullException("model");
             try
             {
-                sadaDbContext.Grades.Remove(model);
+                sadaDbContext.Lessons.Remove(model);
                 return true;
             }
             catch (Exception)
@@ -57,34 +57,34 @@ namespace Sada.Infrastructure.Services
             return sadaDbContext.DisposeAsync();
         }
 
-        public Grade? FindById(int id)
+        public Lesson? FindById(int id)
         {
-            return sadaDbContext.Grades.Find(id);
+            return sadaDbContext.Lessons.Find(id);
         }
 
-        public async Task<Grade?> FindByIdAsync(int id)
+        public async Task<Lesson?> FindByIdAsync(int id)
         {
-            return await sadaDbContext.Grades.FindAsync(id);
+            return await sadaDbContext.Lessons.FindAsync(id);
         }
 
-        public Grade? FindByName(string name)
+        public Lesson? FindByName(string name)
         {
             throw new NotImplementedException();
         }
 
-        public Task<Grade?> FindByNameAsync(string name)
+        public Task<Lesson?> FindByNameAsync(string name)
         {
             throw new NotImplementedException();
         }
 
-        public ICollection<Grade> GetAll()
+        public ICollection<Lesson> GetAll()
         {
-            return sadaDbContext.Grades.ToList();
+            return sadaDbContext.Lessons.ToList();
         }
 
-        public async Task<ICollection<Grade>> GetAllAsync()
+        public async Task<ICollection<Lesson>> GetAllAsync()
         {
-            return await sadaDbContext.Grades.ToListAsync();
+            return await sadaDbContext.Lessons.ToListAsync();
         }
 
         public void SaveChanges()
@@ -97,7 +97,7 @@ namespace Sada.Infrastructure.Services
             await sadaDbContext.SaveChangesAsync();
         }
 
-        public bool Update(Grade model)
+        public bool Update(Lesson model)
         {
             try
             {
@@ -111,9 +111,9 @@ namespace Sada.Infrastructure.Services
             }
         }
 
-        public IQueryable<Grade> Where(Expression<Func<Grade, bool>> where)
+        public IQueryable<Lesson> Where(Expression<Func<Lesson, bool>> where)
         {
-            IQueryable<Grade> query = (IQueryable<Grade>)sadaDbContext.Grades;
+            IQueryable<Lesson> query = (IQueryable<Lesson>)sadaDbContext.Lessons;
             if (where != null)
             {
                 query = query.Where(where);
