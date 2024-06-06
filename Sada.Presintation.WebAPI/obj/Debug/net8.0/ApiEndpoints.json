@@ -17,7 +17,7 @@
   },
   {
     "ContainingType": "Sada.Presintation.WebAPI.Controllers.GradeController",
-    "Method": "PostSchool",
+    "Method": "PostGrade",
     "RelativePath": "api/Grade/school{sid}",
     "HttpMethod": "POST",
     "IsController": true,
@@ -59,7 +59,7 @@
   },
   {
     "ContainingType": "Sada.Presintation.WebAPI.Controllers.GradeController",
-    "Method": "DeleteSchool",
+    "Method": "DeleteGrade",
     "RelativePath": "api/Grade/school{sid}/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
@@ -80,7 +80,7 @@
   },
   {
     "ContainingType": "Sada.Presintation.WebAPI.Controllers.GradeController",
-    "Method": "PutSchool",
+    "Method": "PutGrade",
     "RelativePath": "api/Grade/schoole{sid}/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
@@ -99,6 +99,111 @@
       {
         "Name": "sid",
         "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sada.Presintation.WebAPI.Controllers.LessonController",
+    "Method": "DeleteLesson",
+    "RelativePath": "api/Lesson/DeleteLessonByGrade{gid}WithId{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "gid",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sada.Presintation.WebAPI.Controllers.LessonController",
+    "Method": "GetLessonById",
+    "RelativePath": "api/Lesson/GetLessonByGrade{gid}/id={id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "gid",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sada.Presintation.WebAPI.Controllers.LessonController",
+    "Method": "GetLessons",
+    "RelativePath": "api/Lesson/GetLessonsByGrade{gid}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "gid",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sada.Presintation.WebAPI.Controllers.LessonController",
+    "Method": "PostLesson",
+    "RelativePath": "api/Lesson/PostLessonByGrade{gid}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "gid",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "Sada.Presintation.WebAPI.Models.LessonPostRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sada.Presintation.WebAPI.Controllers.LessonController",
+    "Method": "PutLesson",
+    "RelativePath": "api/Lesson/PutLessonByGrade{gid}WithId{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "gid",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "Sada.Presintation.WebAPI.Models.LessonPutRequest",
         "IsRequired": true
       }
     ],

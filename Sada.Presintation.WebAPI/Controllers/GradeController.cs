@@ -64,7 +64,7 @@ namespace Sada.Presintation.WebAPI.Controllers
             
         }
         [HttpPost("school{sid}")]
-        public async Task<IActionResult> PostSchool(int sid, [FromBody] GradeAddRequest request)
+        public async Task<IActionResult> PostGrade(int sid, [FromBody] GradeAddRequest request)
         {
             int userId = 0;
             var userIdClaim = User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier)?.Value;
@@ -97,7 +97,7 @@ namespace Sada.Presintation.WebAPI.Controllers
             return Unauthorized();
         }
         [HttpPut("schoole{sid}/{id}")]
-        public async Task<IActionResult> PutSchool([FromBody] GradePutRequest request, int id, int sid)
+        public async Task<IActionResult> PutGrade([FromBody] GradePutRequest request, int id, int sid)
         {
             int userId = 0;
             var userIdClaim = User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier)?.Value;
@@ -134,7 +134,7 @@ namespace Sada.Presintation.WebAPI.Controllers
             
         }
         [HttpDelete("school{sid}/{id}")]
-        public async Task<IActionResult> DeleteSchool(int id, int sid)
+        public async Task<IActionResult> DeleteGrade(int id, int sid)
         {
             int userId = 0;
             var userIdClaim = User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier)?.Value;
