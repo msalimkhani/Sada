@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Sada.Presintation.WebAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c5740b3b0dbd50901e3295e979b02393f88cf61e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bc0cb08928eaaa2a0da4bddfd8b5fa6bcbf70054")]
 [assembly: System.Reflection.AssemblyProductAttribute("Sada.Presintation.WebAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Sada.Presintation.WebAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

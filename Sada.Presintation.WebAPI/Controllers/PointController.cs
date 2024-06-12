@@ -11,7 +11,7 @@ namespace Sada.Presintation.WebAPI.Controllers
     [Route("api/[controller]")]
     [ApiController]
     [Authorize]
-    public class PointController(INomreService nomreService) : ControllerBase
+    public class PointController(INomreService nomreService, IKarnameService karnameService) : ControllerBase
     {
         [HttpGet("getAllLessons/{gid}")]
         public async Task<IActionResult> GetAllLessons(int gid)
@@ -41,11 +41,16 @@ namespace Sada.Presintation.WebAPI.Controllers
                 return BadRequest();
             }
         }
-        [HttpDelete("RemoveNomre/{lpid}")]
+        [HttpDelete("removeNomre/{lpid}")]
         public async Task<IActionResult> RemovePoint(int lpid)
         {
             await nomreService.RemoveNomreByLessonPointId(lpid);
             return Ok();
+        }
+        [HttpGet("generateKarnameByStudentId{stid}")]
+        public IActionResult GenerateKarnameByStudentId(int stid)
+        {
+            return Ok(karnameService.GenerateKarnameByStudentId(stid));
         }
     }
 }
