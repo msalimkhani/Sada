@@ -12,6 +12,7 @@ namespace Sada.Infrastructure.Data
         public DbSet<LessonPoint> LessonPoints { get; set; }
         public DbSet<Grade> Grades { get; set; }
         public DbSet<User> Users { get; set; }
+        public DbSet<ClassStudent> ClassStudents { get; set; }
         public SadaDbContext(DbContextOptions<SadaDbContext> dbContextOptions) : base(dbContextOptions)
         {
         }

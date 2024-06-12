@@ -9,8 +9,10 @@ namespace Sada.Core.Application.Interfaces
 {
     public interface INomreService
     {
-        IEnumerable<Lesson> RetriveLessons(int gradeId);
+        Task<IEnumerable<Lesson>> RetriveLessons(int gradeId);
         Task RegisterNomreForStudentByLessonId(int studentId, int lessonId, int point);
         Task RemoveNomreByLessonPointId(int lpId);
+        Task<IEnumerable<LessonPoint>> GetPoints(int studentId);
+        Task<LessonPoint?> GetPoint(int studentId, int lessonId);
     }
 }

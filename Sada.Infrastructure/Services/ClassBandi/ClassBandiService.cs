@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 using Sada.Core.Application.Exceptions;
 using Sada.Core.Application.Interfaces;
 using Sada.Core.Application.Repositories;
@@ -15,9 +16,13 @@ namespace Sada.Infrastructure.Services
     public class ClassBandiService : IClassBandiService
     {
         private IRepository<SchoolClass> _repository;
-        public ClassBandiService(IRepository<SchoolClass> repository)
+        private IRepository<Student> _studentRepository;
+        private IRepository<ClassStudent> classStudentRepo;
+        public ClassBandiService(IRepository<SchoolClass> repository, IRepository<Student> studentRepository, IRepository<ClassStudent> classStudentRepo)
         {
             _repository = repository;
+            _studentRepository = studentRepository;
+            this.classStudentRepo = classStudentRepo;
         }
         public async Task<bool> CreateClassAsync(SchoolClass schoolClass)
         {
@@ -69,18 +74,27 @@ namespace Sada.Infrastructure.Services
                 throw new ClassBandiUnsuccesfulException(ex.Message, ex.InnerException);
             }
         }
-        public async Task<bool> RegisterStudentForClassAsync(int classId, Student student)  
+        public async Task<bool> RegisterStudentForClassAsync(int classId, int stId)
         {
             var c = _repository.FindById(classId);
             if (c == null)
             {
                 throw new EntityNotFoundException<SchoolClass>("Cannot Found SchoolClass With Given Id!");
             }
-            if (c.Students == null)
+            if (c.Availble <= 0)
             {
                 return false;
             }
-            else { c.Students.Add(student); }
+            else
+            {
+                var stclass = new ClassStudent()
+                {
+                    ClassId = classId,
+                    StudentId = stId
+                };
+                classStudentRepo.Add(stclass);
+                c.Count++;
+            }
             try
             {
                 _repository.Update(c);
@@ -93,18 +107,18 @@ namespace Sada.Infrastructure.Services
                 throw new ClassBandiUnsuccesfulException(ex.Message, ex.InnerException);
             }
         }
-        public async Task<bool> RemoveStudentForClassAsync(int classId, Student student)
+        public async Task<bool> RemoveStudentForClassAsync(int classId, int stId)
         {
             var c = _repository.FindById(classId);
             if (c == null)
             {
                 throw new EntityNotFoundException<SchoolClass>("Cannot Found SchoolClass With Given Id!");
             }
-            if (c.Students == null)
+            else 
             {
-                return false;
+                classStudentRepo.Delete(await classStudentRepo.Where(c => c.ClassId == classId && c.StudentId == stId).FirstOrDefaultAsync());
+                c.Count--;
             }
-            else { c.Students.Remove(student); }
             try
             {
                 _repository.Update(c);
@@ -124,11 +138,7 @@ namespace Sada.Infrastructure.Services
             {
                 throw new EntityNotFoundException<SchoolClass>("Cannot Found SchoolClass With Given Id!");
             }
-            var l = new List<Student>();
-            l.Capacity = capacity;
-            c.Students = l;
-            _repository.Update(c);
-            _repository.SaveChanges();
+            c.Capacity = capacity;
         }
         public void Dispose()
         {
@@ -138,6 +148,11 @@ namespace Sada.Infrastructure.Services
         public ValueTask DisposeAsync()
         {
             return _repository.DisposeAsync();
+        }
+
+        public async Task<SchoolClass?> GetClassById(int id)
+        {
+            return await _repository.FindByIdAsync(id);
         }
     }
 }

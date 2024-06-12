@@ -10,5 +10,8 @@ namespace Sada.Core.Application.Interfaces
     public interface ISabtNamService : IDisposable, IAsyncDisposable
     {
         Task<bool> RegisterStudentAsync(Student student);
+        Task SaveChangesAsync();
+        Task Edit(Student student);
+        Task Delete(int stId);
     }
 }

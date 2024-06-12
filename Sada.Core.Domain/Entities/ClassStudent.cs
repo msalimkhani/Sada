@@ -1,5 +1,4 @@
-﻿using Sada.Core.Domain.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -9,12 +8,13 @@ using System.Threading.Tasks;
 
 namespace Sada.Core.Domain.Entities
 {
-    public class Student : Person
+    public class ClassStudent
     {
         [Key]
-        public int StudentId { get; set; }
+        public int CS_ID { get; set; }
         [ForeignKey(nameof(SchoolClass))]
-
-        public virtual ICollection<LessonPoint>? LessonPoints { get; set; }
+        public int ClassId { get; set; }
+        [ForeignKey(nameof(Student))]
+        public int StudentId { get; set; }
     }
 }

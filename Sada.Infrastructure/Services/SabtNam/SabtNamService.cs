@@ -36,5 +36,39 @@ namespace Sada.Infrastructure.Services
         {
             await repository.DisposeAsync();
         }
+
+        public async Task SaveChangesAsync()
+        {
+            await repository.SaveChangesAsync();
+        }
+
+        public async Task Edit(Student student)
+        {
+            if (student == null) { throw new ArgumentNullException(); }
+            repository.Add(student);
+            try
+            {
+                await repository.SaveChangesAsync();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        public async Task Delete(int stId)
+        {
+            repository.Delete(stId);
+            try
+            {
+                await repository.SaveChangesAsync();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
     }
 }

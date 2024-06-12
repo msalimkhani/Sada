@@ -15,6 +15,15 @@ namespace Sada.Core.Domain.Entities
         [ForeignKey(nameof(Grade))]
         public required int GradeId { get; set; }
         public required string ClassName { get; set; }
+        public int Capacity { get; set; }
+        public int Count { get; set; }
+        public int Availble
+        {
+            get
+            {
+                return Capacity - Count;
+            }
+        }
         public virtual ICollection<Student>? Students { get; set; }
     }
 }

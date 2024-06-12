@@ -1,5 +1,136 @@
 [
   {
+    "ContainingType": "Sada.Presintation.WebAPI.Controllers.ClassController",
+    "Method": "CreateClassByGradeId",
+    "RelativePath": "api/Class/CreateClassByGradeId{gid}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "gid",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "Sada.Presintation.WebAPI.Models.ClassPostRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sada.Presintation.WebAPI.Controllers.ClassController",
+    "Method": "CreateClassCapacity",
+    "RelativePath": "api/Class/CreateClassCapacity{classId}/{capacity}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "classId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "capacity",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sada.Presintation.WebAPI.Controllers.ClassController",
+    "Method": "DeleteClassByGradeId",
+    "RelativePath": "api/Class/DeleteClassByGradeId{gid}AndClassId{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "gid",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sada.Presintation.WebAPI.Controllers.ClassController",
+    "Method": "ModifyClassByGradeId",
+    "RelativePath": "api/Class/ModifyClassByGradeId{gid}WithClassId{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "gid",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "Sada.Presintation.WebAPI.Models.ClassPutRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sada.Presintation.WebAPI.Controllers.ClassController",
+    "Method": "RegisterStudentForClassById",
+    "RelativePath": "api/Class/RegisterStudent{studentId}ForClassById{classId}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "classId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "studentId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sada.Presintation.WebAPI.Controllers.ClassController",
+    "Method": "RemoveStudentStudentForClassById",
+    "RelativePath": "api/Class/RemoveStudent{studentId}ForClassById{classId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "classId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "studentId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Sada.Presintation.WebAPI.Controllers.GradeController",
     "Method": "GetGrades",
     "RelativePath": "api/Grade/school{sid}",
@@ -315,6 +446,59 @@
       {
         "Name": "id",
         "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sada.Presintation.WebAPI.Controllers.StudentController",
+    "Method": "DeleteStudent",
+    "RelativePath": "api/Student/DeleteStudentById={stId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "stId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sada.Presintation.WebAPI.Controllers.StudentController",
+    "Method": "ModifyStudent",
+    "RelativePath": "api/Student/ModifyStudentById={stId}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "stId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "Sada.Presintation.WebAPI.Models.StudentModifyRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sada.Presintation.WebAPI.Controllers.StudentController",
+    "Method": "RegisterStudent",
+    "RelativePath": "api/Student/RegisterStudent",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Sada.Presintation.WebAPI.Models.StudentRegisterRequest",
         "IsRequired": true
       }
     ],

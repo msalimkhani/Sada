@@ -22,7 +22,7 @@ namespace Sada.Presintation.WebAPI.Controllers
         [HttpPost("PostLessonByGrade{gid}")]
         public async Task<IActionResult> PostLesson(int gid, [FromBody] LessonPostRequest request)
         {
-            if (request == null) throw new ArgumentNullException(nameof(request));
+            if (request == null) return BadRequest("Request is Empty!.");
             lessonRepository.Add(new Lesson()
             {
                 GradeId = gid,
@@ -41,8 +41,8 @@ namespace Sada.Presintation.WebAPI.Controllers
         [HttpPut("PutLessonByGrade{gid}WithId{id}")]
         public async Task<IActionResult> PutLesson(int gid, int id, [FromBody] LessonPutRequest request)
         {
-            if (request == null) throw new ArgumentNullException(nameof(request));
-            if(!(id != 0 && gid != 0 && request.LessonId == id && request.GradeId == gid))
+            if (request == null) return BadRequest("Request is Empty!.");
+            if (!(id != 0 && gid != 0 && request.LessonId == id && request.GradeId == gid))
             {
                 return BadRequest(request);
             }
